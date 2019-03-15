@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AngajatService {
-    List<Angajat> listaAngajati = new ArrayList<>();
+    List<Manager> listaManager = new ArrayList<>();
+    List<HumanResources> listaHR = new ArrayList<>();
+    List<Developer> listaDeveloper = new ArrayList<>();
 
     public AngajatService(){
         init();
@@ -15,18 +17,22 @@ public class AngajatService {
     Beneficii extra = new Beneficii(15, true, true, 24);
 
     public void init(){
-        Angajat EduardGherman = new Angajat("Gherman", "Eduard", Functie.Analist, partial , 5000.00);
-        Angajat SilvanaGherman = new Angajat("Gherman", "Silvana", Functie.Manager, extra , 6000.00);
-        Angajat MariusBalanuca = new Angajat("Balanuca", "Marius", Functie.Consultant, complet , 9000.00);
-        Angajat GeorgianaBalanuca = new Angajat("Balanuca", "Georgiana", Functie.HR, extra , 5000.00);
+        Developer EduardGherman = new Developer("Gherman", "Eduard",  partial , 5000.00);
+        HumanResources SilvanaGherman = new HumanResources("Gherman", "Silvana",  extra , 6000.00);
+        Developer MariusBalanuca = new Developer("Balanuca", "Marius",  complet , 9000.00);
+        Manager GeorgianaBalanuca = new Manager("Balanuca", "Georgiana",  extra , 5000.00);
+        Manager AndreeaPahantu = new Manager("Pahontu", "Andreea",  extra , 9000.00);
+        Developer MihaiRosca = new Developer("Rosca", "Mihai",  extra , 7000.00);
 
-        listaAngajati.add(EduardGherman);
-        listaAngajati.add(SilvanaGherman);
-        listaAngajati.add(MariusBalanuca);
-        listaAngajati.add(GeorgianaBalanuca);
+        listaDeveloper.add(EduardGherman);
+        listaHR.add(SilvanaGherman);
+        listaDeveloper.add(MariusBalanuca);
+        listaManager.add(GeorgianaBalanuca);
+        listaManager.add(AndreeaPahantu);
+        listaDeveloper.add(MihaiRosca);
 
     }
 
-    public List<Angajat> getListaAngajati(){return listaAngajati;}
+    public List<Manager> getListaManager(){return listaManager;}
 
 }
