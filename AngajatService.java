@@ -2,14 +2,17 @@ package com.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Arrays;
 
 public class AngajatService {
-    List<Manager> listaManager = new ArrayList<>();
-    List<HumanResources> listaHR = new ArrayList<>();
-    List<Developer> listaDeveloper = new ArrayList<>();
+
+    List<Angajat> listaAngajati = new ArrayList<>();
+
 
     public AngajatService(){
+
         init();
+
     }
 
     Beneficii complet = new Beneficii(10, true, true, 21);
@@ -24,15 +27,16 @@ public class AngajatService {
         Manager AndreeaPahantu = new Manager("Pahontu", "Andreea",  extra , 9000.00);
         Developer MihaiRosca = new Developer("Rosca", "Mihai",  extra , 7000.00);
 
-        listaDeveloper.add(EduardGherman);
-        listaHR.add(SilvanaGherman);
-        listaDeveloper.add(MariusBalanuca);
-        listaManager.add(GeorgianaBalanuca);
-        listaManager.add(AndreeaPahantu);
-        listaDeveloper.add(MihaiRosca);
+        listaAngajati.add(EduardGherman);
+        listaAngajati.add(SilvanaGherman);
+        listaAngajati.add(MariusBalanuca);
+        listaAngajati.add(GeorgianaBalanuca);
+        listaAngajati.add(AndreeaPahantu);
+        listaAngajati.add(MihaiRosca);
+
 
     }
 
-    public List<Manager> getListaManager(){return listaManager;}
+    public List<Angajat> getListaAngajati(){return listaAngajati;}
 
 }
