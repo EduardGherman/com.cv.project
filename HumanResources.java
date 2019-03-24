@@ -1,8 +1,12 @@
 package com.model;
 
 public class HumanResources extends Angajat {
-    public HumanResources() {
-        super();
-    }
+
     Integer numarAnagajat;
+
+    public HumanResources(String nume, String prenume, Beneficii beneficii, Double salar) {
+        super(nume, prenume, beneficii, salar);
+    }
+
+
 }
